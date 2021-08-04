@@ -29,7 +29,7 @@ public:
             curr->next = second;
             second->next = first;
             
-            curr = curr->next->next;
+            curr = curr->next->next;    // curr = first;
         }
         return dummy->next;
     }
