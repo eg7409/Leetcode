@@ -17,6 +17,7 @@ public:
         
         sort(q.begin(),q.end());
         
+        
         int i=0;
         
         while(r<n&&c<m){
