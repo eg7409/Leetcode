@@ -36,8 +36,7 @@ public:
             pq.pop();
         }
         
-        reverse(ans.begin(),ans.end());
-        
+    
         
         
         return ans;
