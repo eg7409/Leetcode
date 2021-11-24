@@ -45,3 +45,50 @@ public:
         return true;
     }
 };
+
+/*Another Method*/
+
+class Solution {
+public:
+    bool backspaceCompare(string s, string t) {
+        int n = s.size();
+        int m = t.size();
+        
+        int skip = 0;
+        
+        string s1 = "", s2 = "";
+        
+        for(int i=n-1;i>=0;i--){
+            if(s[i] == '#'){
+                skip++;
+            }
+            else{
+                if(skip>0){
+                    skip--;
+                }
+                else{
+                    s1 += s[i];
+                }
+            }
+        }
+        
+        skip = 0;
+        
+        for(int i=m-1;i>=0;i--){
+            if(t[i] == '#'){
+                skip++;
+            }
+            else{
+                if(skip!=0){
+                    skip--;
+                }
+                else{
+                    s2 += t[i];
+                }
+            }
+        }
+        
+        
+        return s1 == s2;
+    }
+};
