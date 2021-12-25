@@ -20,6 +20,7 @@ public:
             if(m.find(v[i])!=m.end()){
                 ans += m[v[i]];
             }
+
             m[v[i]]++;
         }
         
